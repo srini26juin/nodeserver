@@ -23,25 +23,27 @@ var con = mysql.createConnection({
 router.get('/login', function (req, res, next) {
 
   con.connect(function (err) {
-    con.query("SELECT * FROM login_user", function (err, result, fields) {
-      console.log(result[0].login_name);
+
+    res.send("working")
+    // con.query("SELECT * FROM login_user", function (err, result, fields) {
+    //   console.log(result[0].login_name);
       // if (result[0].login_name == "srini" && result[0].login_name == "srini") {
-        db.login.find(function (err, login) {
-          res.json(login);
-        });
+        // db.login.find(function (err, login) {
+        //   res.json(login);
+        // });
       // }
       // else {
-        console.info(status[500]);
-        res.status(400)
-        res.send("invalid user").end();
+        // console.info(status[500]);
+        // res.status(400)
+        // res.send("invalid user").end();
         // res.redirect('/')
         
         // console.log("error message", err)
       // }
-    });
+  //   });
 
 
-  });
+  // });
 
 
 
@@ -49,26 +51,26 @@ router.get('/login', function (req, res, next) {
 
 
 //Get single task
-router.get('/login/:id', function (req, res, next) {
-  db.login.findOne({ _id: mongojs.ObjectId(req.params.id) }, function (err, login) {
-    if (err) {
-      res.send(err);
-    }
-    res.json(login);
-  });
-});
+// router.get('/login/:id', function (req, res, next) {
+//   db.login.findOne({ _id: mongojs.ObjectId(req.params.id) }, function (err, login) {
+//     if (err) {
+//       res.send(err);
+//     }
+//     res.json(login);
+//   });
+// });
 
 
 
 
 //Delete task
-router.delete('/login/:id', function (req, res, next) {
-  db.login.remove({ _id: mongojs.ObjectId(req.params.id) }, function (err, login) {
-    if (err) {
-      res.send(err);
-    }
-    res.json(login);
-  });
-});
+// router.delete('/login/:id', function (req, res, next) {
+//   db.login.remove({ _id: mongojs.ObjectId(req.params.id) }, function (err, login) {
+//     if (err) {
+//       res.send(err);
+//     }
+//     res.json(login);
+//   });
+// });
 
 module.exports = router;
