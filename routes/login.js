@@ -5,7 +5,7 @@ var url = require('url');
 var mongojs = require('mongojs');
 var index = require('./index');
 var mysql = require('mysql');
-const status = require('http-status');
+// const status = require('http-status');
 
 var db = mongojs('mongodb://srini:srini8865@ds153980.mlab.com:53980/sweet', ['login']);
 
@@ -15,7 +15,7 @@ var db = mongojs('mongodb://srini:srini8865@ds153980.mlab.com:53980/sweet', ['lo
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Srini@8865",
   database: "schoolproject"
 });
 
