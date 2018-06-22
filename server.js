@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mysql = require('mysql');
 var index = require('./routes/index');
-var login = require('./routes/login');
+// var login = require('./routes/login');
 
 
 
