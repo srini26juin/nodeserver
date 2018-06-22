@@ -43,7 +43,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 
 app.use('/', index);
-app.use('/api', login);
+// app.use('/api', login);
 
 app.listen(port, function(){
    console.log("server running");
